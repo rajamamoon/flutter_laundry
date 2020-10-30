@@ -1,6 +1,6 @@
 # Flutter Iron shop (laundry)
 
-# How to run
+## How to run
 1. Clone the repo
 2. Open the project in Andriod Studio or Code
 3. Go to main.dart and click run 
