@@ -1,5 +1,4 @@
-abstract class DryWashEvent {
-}
+abstract class DryWashEvent {}
 
 class DryWash extends DryWashEvent {
   Function callback;
@@ -16,14 +15,11 @@ class WashItem extends DryWashEvent {
   WashItem({this.callback});
 }
 
-class WashItemQuantity extends DryWashEvent {
-}
+class WashItemQuantity extends DryWashEvent {}
 
-class WashItemDelete extends DryWashEvent {
-}
+class WashItemDelete extends DryWashEvent {}
 
-class WashItemWashWater extends DryWashEvent {
-}
+class WashItemWashWater extends DryWashEvent {}
 
 class DryWashSelect extends DryWashEvent {
   Function callback;

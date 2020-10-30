@@ -38,9 +38,7 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
       try {
         if (apiProvider.apiResult.responseCode == ok200) {
           var response = apiProvider.apiResult.response;
-          yield state.copyWith(
-            loading: false
-          );
+          yield state.copyWith(loading: false);
           event.callback(response);
         } else {
           yield state.copyWith(
@@ -49,9 +47,7 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
           event.callback(apiProvider.apiResult.errorMessage);
         }
       } catch (e) {
-        yield state.copyWith(
-          loading: false
-        );
+        yield state.copyWith(loading: false);
       }
     }
   }

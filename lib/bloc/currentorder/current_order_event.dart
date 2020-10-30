@@ -1,5 +1,4 @@
-abstract class CurrentOrderEvent {
-}
+abstract class CurrentOrderEvent {}
 
 class UserIdParam extends CurrentOrderEvent {
   final String userIdParam;

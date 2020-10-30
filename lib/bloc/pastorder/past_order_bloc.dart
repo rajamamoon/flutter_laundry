@@ -26,7 +26,8 @@ class PastOrderBloc extends Bloc<PastOrderEvent, PastOrderState> {
           var response = apiProvider.apiResult.response;
           yield state.copyWith(loading: false, pastOrderList: response);
         } else {
-          yield state.copyWith(loading: false, errorMessage: apiProvider.apiResult.errorMessage);
+          yield state.copyWith(
+              loading: false, errorMessage: apiProvider.apiResult.errorMessage);
         }
       } catch (e) {
         yield state.copyWith(loading: false, errorMessage: e.toString());

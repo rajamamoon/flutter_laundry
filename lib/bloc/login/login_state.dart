@@ -1,6 +1,6 @@
 import 'package:meta/meta.dart';
 
-class LoginState  {
+class LoginState {
   final String mobile;
   final String password;
   bool loading;
@@ -19,11 +19,7 @@ class LoginState  {
   }
 
   LoginState copyWith(
-      {bool loading,
-      Map error,
-      String mobile,
-      String password}) {
-
+      {bool loading, Map error, String mobile, String password}) {
     return LoginState(
       mobile: mobile ?? this.mobile,
       password: password ?? this.password,
