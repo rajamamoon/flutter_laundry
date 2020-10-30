@@ -1,10 +1,13 @@
 # Flutter Iron shop (laundry)
-A new Flutter application for online furniture shopping. 
-Design Credit : https://www.uplabs.com/posts/laundry-service-iron-only-app-design-concept
+
 
 # Tutorial
 Tutorial link : https://youtu.be/1Fyh1T80jhA
 
-## Author
-If you like my work, please consider supporting me with your kind contribution. Thank you!!!
-<div><a href=https://paypal.me/kaushikchandru?locale.x=en_GB>paypal </a></div>
+# How to run
+1. Clone the repo
+2. Open the project in Andriod Studio or Code
+3. Go to main.dart and click run 
+4. Select the Emulation device.
+5.Done
+
