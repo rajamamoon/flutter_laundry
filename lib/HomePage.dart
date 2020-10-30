@@ -201,9 +201,22 @@ class _homePageState extends State<homePage> {
                   padding: EdgeInsets.all(13),
                   decoration: BoxDecoration(
                       gradient: gradientStyle, shape: BoxShape.circle),
-                  child: Text(
-                    "+",
-                    style: TextStyle(color: Colors.white, fontSize: 40),
+                  child: InkWell(
+                    onTap: openOrderPage,
+                    child: Container(
+                      decoration: BoxDecoration(
+                          gradient: gradientStyle,
+                          borderRadius: BorderRadius.all(Radius.circular(20))),
+                      padding:
+                          EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+                      child: Text(
+                        "+",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.w600,
+                            fontSize: 20),
+                      ),
+                    ),
                   ),
                 )
               ],
