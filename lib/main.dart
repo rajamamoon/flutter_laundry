@@ -68,21 +68,29 @@ class MyApp extends StatelessWidget {
         dryWashRoute: (BuildContext c) => DryWashPage(),
         selectWashItemRoute: (BuildContext c) => SelectWashItemPage(),
         selectWashShopRoute: (BuildContext c) => SelectWashShopPage(),
-        dryWashDeliveryAddressRoute: (BuildContext c) => DryWashDeliveryAddressPage(),
+        dryWashDeliveryAddressRoute: (BuildContext c) =>
+            DryWashDeliveryAddressPage(),
         qrCodeRoute: (BuildContext c) => QRCodePage(),
       });
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(create: (context) => LoginBloc(),
-        child: BlocProvider(create: (context) => UserBloc(),
-        child: BlocProvider(create: (context) => CurrentOrderBloc(),
-        child: BlocProvider(create: (context) => PastOrderBloc(),
-        child: BlocProvider(create: (context) => DryWashBloc(),
-        child: BlocProvider(create: (context) => SelectWashShopBloc(),
-        child: BlocProvider(create: (context) => WashDeliveryAddressBloc(),
-        child: BlocProvider(create: (context) => SignUpBloc(),
-
-        child: materialApp))))))));
+    return BlocProvider(
+        create: (context) => LoginBloc(),
+        child: BlocProvider(
+            create: (context) => UserBloc(),
+            child: BlocProvider(
+                create: (context) => CurrentOrderBloc(),
+                child: BlocProvider(
+                    create: (context) => PastOrderBloc(),
+                    child: BlocProvider(
+                        create: (context) => DryWashBloc(),
+                        child: BlocProvider(
+                            create: (context) => SelectWashShopBloc(),
+                            child: BlocProvider(
+                                create: (context) => WashDeliveryAddressBloc(),
+                                child: BlocProvider(
+                                    create: (context) => SignUpBloc(),
+                                    child: materialApp))))))));
   }
 }
