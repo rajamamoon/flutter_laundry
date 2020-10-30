@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ironshop/StyleScheme.dart';
 import 'OrderPage.dart';
 import 'TrackOrderPage.dart';
+import 'profile.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -22,8 +23,6 @@ class _homePageState extends State<homePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomInset: false, // set it to false
-      resizeToAvoidBottomPadding: false,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
@@ -247,7 +246,7 @@ class _homePageState extends State<homePage> {
           context, MaterialPageRoute(builder: (context) => orderPage()));
     } else if (pageId == 3) {
       Navigator.push(
-          context, MaterialPageRoute(builder: (context) => TrackOrderPage()));
+          context, MaterialPageRoute(builder: (context) => ProfilePage()));
     } else {
       print(pageId);
     }
