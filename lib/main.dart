@@ -5,6 +5,7 @@ import 'Screens/ProfilePage.dart';
 import 'Screens/SplashScreen.dart';
 import 'Screens/signup.dart';
 import 'Screens/login.dart';
+import 'Screens/password.dart';
 
 void main() {
   runApp(MyApp());
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
       routes: <String, WidgetBuilder>{
         PROFILE: (BuildContext context) => new LoginPage(),
         '/signup': (BuildContext context) => new SignupPage(),
+        '/password': (BuildContext context) => new PasswordPage(),
         '/home': (BuildContext context) => new Home(),
         '/profile': (BuildContext context) => new ProfilePage(),
       },

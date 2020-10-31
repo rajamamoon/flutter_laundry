@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'SplashScreen.dart';
-import 'ProfilePage.dart';
-import 'signup.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -73,6 +70,9 @@ class _MyHomePageState extends State<LoginPage> {
                       alignment: Alignment(1.0, 0.0),
                       padding: EdgeInsets.only(top: 15.0, left: 20.0),
                       child: InkWell(
+                        onTap: () {
+                          Navigator.of(context).pushNamed('/password');
+                        },
                         child: Text(
                           'Forgot Password',
                           style: TextStyle(

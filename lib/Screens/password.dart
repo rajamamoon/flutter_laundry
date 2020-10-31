@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class SignupPage extends StatefulWidget {
+class PasswordPage extends StatefulWidget {
   @override
-  _SignupPageState createState() => _SignupPageState();
+  _PasswordPageState createState() => _PasswordPageState();
 }
 
-class _SignupPageState extends State<SignupPage> {
+class _PasswordPageState extends State<PasswordPage> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -19,13 +19,13 @@ class _SignupPageState extends State<SignupPage> {
                     Container(
                       padding: EdgeInsets.fromLTRB(15.0, 110.0, 0.0, 0.0),
                       child: Text(
-                        'Signup',
+                        'Password Recovery',
                         style: TextStyle(
-                            fontSize: 80.0, fontWeight: FontWeight.bold),
+                            fontSize: 40.0, fontWeight: FontWeight.bold),
                       ),
                     ),
                     Container(
-                      padding: EdgeInsets.fromLTRB(260.0, 125.0, 0.0, 0.0),
+                      padding: EdgeInsets.fromLTRB(365.0, 80.0, 0.0, 0.0),
                       child: Text(
                         '.',
                         style: TextStyle(
@@ -37,6 +37,14 @@ class _SignupPageState extends State<SignupPage> {
                   ],
                 ),
               ),
+              Container(
+                padding: EdgeInsets.fromLTRB(10.0, 10.0, 0.0, 0.0),
+                child: Text(
+                  'It is ok to forget.You were always stupid',
+                  style: TextStyle(fontSize: 20.0),
+                ),
+              ),
+              SizedBox(height: 50.0),
               Container(
                   padding: EdgeInsets.only(top: 35.0, left: 20.0, right: 20.0),
                   child: Column(
@@ -54,29 +62,7 @@ class _SignupPageState extends State<SignupPage> {
                                 borderSide: BorderSide(color: Colors.green))),
                       ),
                       SizedBox(height: 10.0),
-                      TextField(
-                        decoration: InputDecoration(
-                            labelText: 'PASSWORD ',
-                            labelStyle: TextStyle(
-                                fontFamily: 'Montserrat',
-                                fontWeight: FontWeight.bold,
-                                color: Colors.grey),
-                            focusedBorder: UnderlineInputBorder(
-                                borderSide: BorderSide(color: Colors.green))),
-                        obscureText: true,
-                      ),
                       SizedBox(height: 10.0),
-                      TextField(
-                        decoration: InputDecoration(
-                            labelText: 'NICK NAME ',
-                            labelStyle: TextStyle(
-                                fontFamily: 'Montserrat',
-                                fontWeight: FontWeight.bold,
-                                color: Colors.grey),
-                            focusedBorder: UnderlineInputBorder(
-                                borderSide: BorderSide(color: Colors.green))),
-                      ),
-                      SizedBox(height: 50.0),
                       Container(
                           height: 40.0,
                           child: Material(
@@ -88,7 +74,7 @@ class _SignupPageState extends State<SignupPage> {
                               onTap: () {},
                               child: Center(
                                 child: Text(
-                                  'SIGNUP',
+                                  'Send',
                                   style: TextStyle(
                                       color: Colors.white,
                                       fontWeight: FontWeight.bold,
