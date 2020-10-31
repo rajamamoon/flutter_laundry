@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
+import 'login.dart';
+
 class ProfilePage extends StatefulWidget {
   @override
   MapScreenState createState() => MapScreenState();
@@ -298,6 +300,18 @@ class MapScreenState extends State<ProfilePage>
                             ],
                           )),
                       !_status ? _getActionButtons() : new Container(),
+                      IconButton(
+                        icon:
+                            Icon(IconData(0xe848, fontFamily: 'MaterialIcons')),
+                        iconSize: 50,
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => LoginPage()),
+                          );
+                        },
+                      ),
                     ],
                   ),
                 ),
