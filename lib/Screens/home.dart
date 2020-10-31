@@ -1,6 +1,6 @@
 import 'package:laundry_app/Constant/details.dart';
 import 'package:flutter/material.dart';
-import 'profilePage.dart';
+import 'ProfilePage.dart';
 
 class Home extends StatelessWidget {
   @override
