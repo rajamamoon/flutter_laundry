@@ -92,7 +92,7 @@ class _MyHomePageState extends State<LoginPage> {
                         shadowColor: Colors.greenAccent,
                         color: Colors.green,
                         elevation: 7.0,
-                        child: GestureDetector(
+                        child: InkWell(
                           onTap: () {
                             Navigator.push(
                               context,
