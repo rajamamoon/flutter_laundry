@@ -1,11 +1,16 @@
 import 'package:laundry_app/Constant/details.dart';
 import 'package:flutter/material.dart';
-import 'ProfilePage.dart';
+import 'menu.dart';
 
 class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: NavDrawer(),
+      appBar: AppBar(
+        backgroundColor: Color(0xff2550255),
+        elevation: 0,
+      ),
       body: Stack(
         overflow: Overflow.visible,
         fit: StackFit.loose,
@@ -14,54 +19,52 @@ class Home extends StatelessWidget {
             clipper: ClippingClass(),
             child: Container(
               width: double.infinity,
-              height: MediaQuery.of(context).size.height * 4 / 7,
+              height: MediaQuery.of(context).size.height * 7 / 7,
               decoration: BoxDecoration(
                 gradient: LinearGradient(
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
-                  colors: [Color(0xff40dedf), Color(0xff0fb2ea)],
+                  colors: [Color(0xff2550255), Color(0xff0002550)],
                 ),
               ),
             ),
           ),
           Positioned(
-            left: 20,
-            top: 80,
-            height: 60,
-            width: 60,
-            child: InkWell(
-              onTap: () {
-                Navigator.pop(context);
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => ProfilePage()));
-              },
-              borderRadius: BorderRadius.circular(100),
-              child: Image.asset("assets/home_images/user.png"),
-            ),
-          ),
-          Positioned(
-            left: 20,
-            top: 150,
+            left: 35,
+            top: 10,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                Text("Hi John",
+                Text("Choose Your Catergory",
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 32,
-                    )),
-                Text(
-                    "Get your laundry washed, folded \nand delivered straight to your door.",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 18,
                     )),
               ],
             ),
           ),
           Positioned(
+              left: 55,
+              top: 50,
+              child: Column(
+                children: <Widget>[
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: Container(
+                      child: Text(
+                        "Get your laundry washed, folded and \ndelivered straight to your door.",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                        ),
+                      ),
+                    ),
+                  )
+                ],
+              )),
+          Positioned(
             left: 20,
-            top: 250,
+            top: 130,
             right: 20,
             child: Column(
               children: <Widget>[
@@ -77,6 +80,29 @@ class Home extends StatelessWidget {
                           imageUrl: "washing-machine.png",
                           item: "Wash",
                           duration: "1 Day"),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: 40,
+                ),
+              ],
+            ),
+          ),
+          Positioned(
+            left: 20,
+            top: 300,
+            right: 20,
+            child: Column(
+              children: <Widget>[
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Detailes()));
+                  },
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: <Widget>[
                       _customCard(
                           imageUrl: "dry.png",
                           item: "Dry Clean",
@@ -87,22 +113,56 @@ class Home extends StatelessWidget {
                 SizedBox(
                   height: 40,
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: <Widget>[
-                    _customCard(
-                        imageUrl: "clean.png",
-                        item: "Premium",
-                        duration: "3 Days"),
-                    _customCard(
-                        imageUrl: "shoe.png",
-                        item: "Others",
-                        duration: "3 Days")
-                  ],
+              ],
+            ),
+          ),
+          Positioned(
+            left: 20,
+            top: 470,
+            right: 20,
+            child: Column(
+              children: <Widget>[
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Detailes()));
+                  },
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: <Widget>[
+                      _customCard(
+                          imageUrl: "clean.png",
+                          item: "Premium",
+                          duration: "3 Days"),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: 40,
                 ),
               ],
             ),
-          )
+          ),
+          Positioned(
+              left: 155,
+              top: 675,
+              child: Column(
+                children: <Widget>[
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: Container(
+                      child: Text(
+                        "Drip & Drop",
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  )
+                ],
+              )),
         ],
       ),
     );
