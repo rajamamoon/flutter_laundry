@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:laundry_app/Screens/ProfilePage.dart';
+import 'package:laundry_app/Screens/login.dart';
 
 class NavDrawer extends StatelessWidget {
   @override
@@ -9,24 +11,30 @@ class NavDrawer extends StatelessWidget {
         children: <Widget>[
           DrawerHeader(
             child: Text(
-              'Side menu',
-              style: TextStyle(color: Colors.white, fontSize: 25),
+              'Drip & Drop',
+              style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 35,
+                  fontWeight: FontWeight.bold),
             ),
             decoration: BoxDecoration(
-                color: Colors.green,
+                color: Colors.pinkAccent,
                 image: DecorationImage(
                     fit: BoxFit.fill,
                     image: AssetImage('assets/images/logo.png'))),
           ),
           ListTile(
             leading: Icon(Icons.input),
-            title: Text('Welcome'),
+            title: Text('Home'),
             onTap: () => {},
           ),
           ListTile(
             leading: Icon(Icons.verified_user),
             title: Text('Profile'),
-            onTap: () => {Navigator.of(context).pop()},
+            onTap: () => {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => ProfilePage()))
+            },
           ),
           ListTile(
             leading: Icon(Icons.settings),
@@ -41,7 +49,10 @@ class NavDrawer extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.exit_to_app),
             title: Text('Logout'),
-            onTap: () => {Navigator.of(context).pop()},
+            onTap: () => {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => LoginPage()))
+            },
           ),
         ],
       ),
