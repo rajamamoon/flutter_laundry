@@ -9,12 +9,12 @@ class Detailes extends StatelessWidget {
         children: <Widget>[
           Container(
             width: double.infinity,
-            height: MediaQuery.of(context).size.height * 4 / 7,
+            height: MediaQuery.of(context).size.height * 7 / 7,
             decoration: BoxDecoration(
               gradient: LinearGradient(
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
-                colors: [Color(0xff40dedf), Color(0xff0fb2ea)],
+                colors: [Color(0xff2550255), Color(0xff0002550)],
               ),
             ),
           ),
