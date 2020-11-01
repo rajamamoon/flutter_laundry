@@ -14,7 +14,7 @@ class Detailes extends StatelessWidget {
               gradient: LinearGradient(
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
-                colors: [Color(0xff2550255), Color(0xff0002550)],
+                colors: [Colors.red, Color(0xff2550255)],
               ),
             ),
           ),

@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       title: 'Laundry App',
       debugShowCheckedModeBanner: false,
       theme: new ThemeData(
-          primaryColor: Color(0xff0082CD), primaryColorDark: Color(0xff0082CD)),
+          primaryColor: Colors.purple, primaryColorDark: Colors.indigo[900]),
       home: new SplashScreen(),
       routes: <String, WidgetBuilder>{
         PROFILE: (BuildContext context) => new LoginPage(),
