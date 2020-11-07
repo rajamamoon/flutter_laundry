@@ -19,14 +19,14 @@ class NavDrawer extends StatelessWidget {
           children: <Widget>[
             DrawerHeader(
               child: Text(
-                'Drip & Drop',
+                '',
                 style: TextStyle(
                     color: Colors.white,
                     fontSize: 35,
                     fontWeight: FontWeight.bold),
               ),
               decoration: BoxDecoration(
-                  color: Colors.pinkAccent,
+                  color: Colors.redAccent,
                   image: DecorationImage(
                       fit: BoxFit.fill,
                       image: AssetImage('assets/images/logo.png'))),

@@ -31,7 +31,7 @@ class _PasswordPageState extends State<PasswordPage> {
                         style: TextStyle(
                             fontSize: 80.0,
                             fontWeight: FontWeight.bold,
-                            color: Colors.green),
+                            color: Colors.red),
                       ),
                     )
                   ],
@@ -40,7 +40,7 @@ class _PasswordPageState extends State<PasswordPage> {
               Container(
                 padding: EdgeInsets.fromLTRB(10.0, 10.0, 0.0, 0.0),
                 child: Text(
-                  'It is ok to forget.You were always stupid',
+                  'Enter Email Below to Recieve Login Details ',
                   style: TextStyle(fontSize: 20.0),
                 ),
               ),
@@ -59,7 +59,7 @@ class _PasswordPageState extends State<PasswordPage> {
                             // hintText: 'EMAIL',
                             // hintStyle: ,
                             focusedBorder: UnderlineInputBorder(
-                                borderSide: BorderSide(color: Colors.green))),
+                                borderSide: BorderSide(color: Colors.red))),
                       ),
                       SizedBox(height: 10.0),
                       SizedBox(height: 10.0),
@@ -67,8 +67,8 @@ class _PasswordPageState extends State<PasswordPage> {
                           height: 40.0,
                           child: Material(
                             borderRadius: BorderRadius.circular(20.0),
-                            shadowColor: Colors.greenAccent,
-                            color: Colors.green,
+                            shadowColor: Colors.redAccent,
+                            color: Colors.red,
                             elevation: 7.0,
                             child: GestureDetector(
                               onTap: () {},

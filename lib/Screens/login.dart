@@ -35,7 +35,7 @@ class _MyHomePageState extends State<LoginPage> {
                         style: TextStyle(
                             fontSize: 80.0,
                             fontWeight: FontWeight.bold,
-                            color: Colors.green)),
+                            color: Colors.red)),
                   )
                 ],
               ),
@@ -52,7 +52,7 @@ class _MyHomePageState extends State<LoginPage> {
                               fontWeight: FontWeight.bold,
                               color: Colors.grey),
                           focusedBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(color: Colors.green))),
+                              borderSide: BorderSide(color: Colors.red))),
                     ),
                     SizedBox(height: 20.0),
                     TextField(
@@ -63,7 +63,7 @@ class _MyHomePageState extends State<LoginPage> {
                               fontWeight: FontWeight.bold,
                               color: Colors.grey),
                           focusedBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(color: Colors.green))),
+                              borderSide: BorderSide(color: Colors.red))),
                       obscureText: true,
                     ),
                     SizedBox(height: 5.0),
@@ -77,7 +77,7 @@ class _MyHomePageState extends State<LoginPage> {
                         child: Text(
                           'Forgot Password',
                           style: TextStyle(
-                              color: Colors.green,
+                              color: Colors.red,
                               fontWeight: FontWeight.bold,
                               fontFamily: 'Montserrat',
                               decoration: TextDecoration.underline),
@@ -89,8 +89,8 @@ class _MyHomePageState extends State<LoginPage> {
                       height: 40.0,
                       child: Material(
                         borderRadius: BorderRadius.circular(20.0),
-                        shadowColor: Colors.greenAccent,
-                        color: Colors.green,
+                        shadowColor: Colors.redAccent,
+                        color: Colors.red,
                         elevation: 7.0,
                         child: InkWell(
                           onTap: () {
@@ -159,7 +159,7 @@ class _MyHomePageState extends State<LoginPage> {
                   child: Text(
                     'Register',
                     style: TextStyle(
-                        color: Colors.green,
+                        color: Colors.red,
                         fontFamily: 'Montserrat',
                         fontWeight: FontWeight.bold,
                         decoration: TextDecoration.underline),
